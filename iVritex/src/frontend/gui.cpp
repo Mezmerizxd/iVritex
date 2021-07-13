@@ -98,8 +98,13 @@ namespace big
 
 	void gui::dx_on_tick()
 	{
+		using namespace features;
+
 		if (ImGui::Begin("iVritex"))
 		{
+			ImGui::Checkbox("Godmode", &game.Self_Godmode);
+			ImGui::Checkbox("Never Wanted", &game.Self_NeverWanted);
+
 			if (ImGui::Button("Unload"))
 			{
 				g_running = false;
@@ -110,9 +115,7 @@ namespace big
 
 	void gui::script_init()
 	{
-		using namespace features;
-
-		game.Alert("iVritex is starting.", "iVritex", "~g~[INFO]");
+		features::game.Alert("iVritex is starting.", "iVritex", "~g~[INFO]");
 	}
 
 	void gui::script_on_tick()
@@ -121,11 +124,15 @@ namespace big
 		{
 			CONTROLS::DISABLE_ALL_CONTROL_ACTIONS(0);
 		}
+
+		
 	}
 
 	void gui::script_func()
 	{
 		g_gui.script_init();
+		features::game.Alert("ImGui is ready.", "iVritex", "~g~[INFO]");
+
 		while (true)
 		{
 			g_gui.script_on_tick();

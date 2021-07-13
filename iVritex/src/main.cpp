@@ -20,33 +20,7 @@ BOOL APIENTRY DllMain(HMODULE hmod, DWORD reason, PVOID)
 		{
 			auto logger_instance = std::make_unique<logger>();
 			try
-			{
-				
-				LOG_RAW(log_color::green | log_color::intensify,
-u8R"kek(                     ...
-                   ;::::;
-                 ;::::; :;
-               ;:::::'   :;
-              ;:::::;     ;.
-             ,:::::'       ;           OOO\
-             ::::::;       ;          OOOOO\
-             ;:::::;       ;         OOOOOOOO
-            ,;::::::;     ;'         / OOOOOOO
-          ;:::::::::`. ,,,;.        /  / DOOOOOO
-        .';:::::::::::::::::;,     /  /     DOOOO
-       ,::::::;::::::;;;;::::;,   /  /        DOOO
-      ;`::::::`'::::::;;;::::: ,#/  /          DOOO
-      :`:::::::`;::::::;;::: ;::#  /            DOOO
-      ::`:::::::`;:::::::: ;::::# /              DOO
-      `:`:::::::`;:::::: ;::::::#/               DOO
-       :::`:::::::`;; ;:::::::::##                OO
-       ::::`:::::::`;::::::::;:::#                OO
-       `:::::`::::::::::::;'`:;::#                O
-        `:::::`::::::::;' /  / `:#
-         ::::::`:::::;'  /  /   `#
-
-)kek");
-				
+			{				
 				auto pointers_instance = std::make_unique<pointers>();
 				LOG_INFO("Pointers initialized.");
 
@@ -116,7 +90,7 @@ u8R"kek(                     ...
 				MessageBoxA(nullptr, ex.what(), nullptr, MB_OK | MB_ICONEXCLAMATION);
 			}
 
-			LOG_INFO("Farewell!");
+			LOG_INFO("Exiting!");
 			logger_instance.reset();
 
 			CloseHandle(g_main_thread);
