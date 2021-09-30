@@ -15,7 +15,6 @@
 #include <imgui.h>
 #include <StackWalker.h>
 
-
 namespace big
 {
 	void gui::dx_init()
@@ -44,7 +43,6 @@ namespace big
 		style.WindowTitleAlign = { 0.5f, 0.5f };
 		style.ButtonTextAlign = { 0.5f, 0.5f };
 		style.DisplaySafeAreaPadding = { 3.f, 3.f };
-
 		auto& colors = style.Colors;
 		colors[ImGuiCol_Text] = ImVec4(1.00f, 1.00f, 1.00f, 1.00f);
 		colors[ImGuiCol_TextDisabled] = ImVec4(1.00f, 0.90f, 0.19f, 1.00f);
@@ -124,8 +122,6 @@ namespace big
 		{
 			CONTROLS::DISABLE_ALL_CONTROL_ACTIONS(0);
 		}
-
-		
 	}
 
 	void gui::script_func()

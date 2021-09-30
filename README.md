@@ -1,5 +1,5 @@
 # iVritex Mod Menu
-iVritex Mod Menu - SpetsnazSicario - Copyright **©** 2021 SpetsnazSicario
+iVritex Mod Menu - SpetsnazSicario
 
 # Note
 * This was made for educational purposes only.
@@ -17,3 +17,6 @@ iVritex Mod Menu - SpetsnazSicario - Copyright **©** 2021 SpetsnazSicario
 > Build the project
 
     vendor/premake/premake5.exe vs2019
+
+# Credits
+* Pocakking - https://github.com/Pocakkin

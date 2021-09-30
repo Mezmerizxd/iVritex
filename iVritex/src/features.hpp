@@ -6,8 +6,6 @@ namespace big::features
 	void run_tick();
 	void script_func();
 
-	
-
 	class Menu 
 	{
 	public:

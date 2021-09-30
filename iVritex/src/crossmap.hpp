@@ -2,7 +2,8 @@
 #include "gta/natives.hpp"
 
 namespace big
-{
+{ 
+	// THIS IS NOT MINE, I DO NOT OWN ANY OF THE NATIVE MAPPINGS
 	inline constexpr const rage::scrNativeMapping g_crossmap[]
 	{
 		{ 0x4EDE34FBADD967A6, 0x4EDE34FBADD967A6 },
