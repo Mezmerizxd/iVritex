@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="backend">
+      <UniqueIdentifier>{ED260B65-5906-8A00-621E-15D7CE7CF061}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="frontend">
+      <UniqueIdentifier>{05A751F0-F173-ACFB-1A8D-9AA306B9E189}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="frontend\purge-theme">
+      <UniqueIdentifier>{370FF869-239E-8133-CCBC-952EB82A92D9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gta">
+      <UniqueIdentifier>{6178880B-CD81-887C-56FD-9E7CC205947C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="memory">
+      <UniqueIdentifier>{DEA8820D-CA4A-ADE3-B305-C1379F463434}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\backend\detour_hook.hpp">
+      <Filter>backend</Filter>
+    </ClInclude>
+    <ClInclude Include="src\backend\fiber_pool.hpp">
+      <Filter>backend</Filter>
+    </ClInclude>
+    <ClInclude Include="src\backend\fonts.hpp">
+      <Filter>backend</Filter>
+    </ClInclude>
+    <ClInclude Include="src\backend\function_types.hpp">
+      <Filter>backend</Filter>
+    </ClInclude>
+    <ClInclude Include="src\backend\gta_util.hpp">
+      <Filter>backend</Filter>
+    </ClInclude>
+    <ClInclude Include="src\backend\hooking.hpp">
+      <Filter>backend</Filter>
+    </ClInclude>
+    <ClInclude Include="src\backend\invoker.hpp">
+      <Filter>backend</Filter>
+    </ClInclude>
+    <ClInclude Include="src\backend\logger.hpp">
+      <Filter>backend</Filter>
+    </ClInclude>
+    <ClInclude Include="src\backend\lua.hpp">
+      <Filter>backend</Filter>
+    </ClInclude>
+    <ClInclude Include="src\backend\natives.hpp">
+      <Filter>backend</Filter>
+    </ClInclude>
+    <ClInclude Include="src\backend\pointers.hpp">
+      <Filter>backend</Filter>
+    </ClInclude>
+    <ClInclude Include="src\backend\renderer.hpp">
+      <Filter>backend</Filter>
+    </ClInclude>
+    <ClInclude Include="src\backend\script.hpp">
+      <Filter>backend</Filter>
+    </ClInclude>
+    <ClInclude Include="src\backend\script_global.hpp">
+      <Filter>backend</Filter>
+    </ClInclude>
+    <ClInclude Include="src\backend\script_hook.hpp">
+      <Filter>backend</Filter>
+    </ClInclude>
+    <ClInclude Include="src\backend\script_mgr.hpp">
+      <Filter>backend</Filter>
+    </ClInclude>
+    <ClInclude Include="src\backend\vmt_hook.hpp">
+      <Filter>backend</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common.hpp" />
+    <ClInclude Include="src\crossmap.hpp" />
+    <ClInclude Include="src\features.hpp" />
+    <ClInclude Include="src\frontend\gui.hpp">
+      <Filter>frontend</Filter>
+    </ClInclude>
+    <ClInclude Include="src\frontend\purge-theme\AbstractOption.hpp">
+      <Filter>frontend\purge-theme</Filter>
+    </ClInclude>
+    <ClInclude Include="src\frontend\purge-theme\AbstractSubmenu.hpp">
+      <Filter>frontend\purge-theme</Filter>
+    </ClInclude>
+    <ClInclude Include="src\frontend\purge-theme\BaseOption.hpp">
+      <Filter>frontend\purge-theme</Filter>
+    </ClInclude>
+    <ClInclude Include="src\frontend\purge-theme\BaseSubmenu.hpp">
+      <Filter>frontend\purge-theme</Filter>
+    </ClInclude>
+    <ClInclude Include="src\frontend\purge-theme\BoolOption.hpp">
+      <Filter>frontend\purge-theme</Filter>
+    </ClInclude>
+    <ClInclude Include="src\frontend\purge-theme\ChooseOption.hpp">
+      <Filter>frontend\purge-theme</Filter>
+    </ClInclude>
+    <ClInclude Include="src\frontend\purge-theme\NumberOption.hpp">
+      <Filter>frontend\purge-theme</Filter>
+    </ClInclude>
+    <ClInclude Include="src\frontend\purge-theme\RegularOption.hpp">
+      <Filter>frontend\purge-theme</Filter>
+    </ClInclude>
+    <ClInclude Include="src\frontend\purge-theme\RegularSubmenu.hpp">
+      <Filter>frontend\purge-theme</Filter>
+    </ClInclude>
+    <ClInclude Include="src\frontend\purge-theme\Script.hpp">
+      <Filter>frontend\purge-theme</Filter>
+    </ClInclude>
+    <ClInclude Include="src\frontend\purge-theme\SubOption.hpp">
+      <Filter>frontend\purge-theme</Filter>
+    </ClInclude>
+    <ClInclude Include="src\frontend\purge-theme\Timer.hpp">
+      <Filter>frontend\purge-theme</Filter>
+    </ClInclude>
+    <ClInclude Include="src\frontend\purge-theme\ui.hpp">
+      <Filter>frontend\purge-theme</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gta\array.hpp">
+      <Filter>gta</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gta\base.hpp">
+      <Filter>gta</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gta\color.hpp">
+      <Filter>gta</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gta\enums.hpp">
+      <Filter>gta</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gta\extensible.hpp">
+      <Filter>gta</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gta\fwddec.hpp">
+      <Filter>gta</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gta\joaat.hpp">
+      <Filter>gta</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gta\matrix.hpp">
+      <Filter>gta</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gta\natives.hpp">
+      <Filter>gta</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gta\net_game_event.hpp">
+      <Filter>gta</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gta\node_list.hpp">
+      <Filter>gta</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gta\ped_factory.hpp">
+      <Filter>gta</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gta\player.hpp">
+      <Filter>gta</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gta\ref_aware.hpp">
+      <Filter>gta</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gta\script_handler.hpp">
+      <Filter>gta</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gta\script_id.hpp">
+      <Filter>gta</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gta\script_program.hpp">
+      <Filter>gta</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gta\script_thread.hpp">
+      <Filter>gta</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gta\tls_context.hpp">
+      <Filter>gta</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gta\vector.hpp">
+      <Filter>gta</Filter>
+    </ClInclude>
+    <ClInclude Include="src\memory\all.hpp">
+      <Filter>memory</Filter>
+    </ClInclude>
+    <ClInclude Include="src\memory\fwddec.hpp">
+      <Filter>memory</Filter>
+    </ClInclude>
+    <ClInclude Include="src\memory\handle.hpp">
+      <Filter>memory</Filter>
+    </ClInclude>
+    <ClInclude Include="src\memory\module.hpp">
+      <Filter>memory</Filter>
+    </ClInclude>
+    <ClInclude Include="src\memory\pattern.hpp">
+      <Filter>memory</Filter>
+    </ClInclude>
+    <ClInclude Include="src\memory\pattern_batch.hpp">
+      <Filter>memory</Filter>
+    </ClInclude>
+    <ClInclude Include="src\memory\range.hpp">
+      <Filter>memory</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\backend\detour_hook.cpp">
+      <Filter>backend</Filter>
+    </ClCompile>
+    <ClCompile Include="src\backend\fiber_pool.cpp">
+      <Filter>backend</Filter>
+    </ClCompile>
+    <ClCompile Include="src\backend\fonts.cpp">
+      <Filter>backend</Filter>
+    </ClCompile>
+    <ClCompile Include="src\backend\hooking.cpp">
+      <Filter>backend</Filter>
+    </ClCompile>
+    <ClCompile Include="src\backend\invoker.cpp">
+      <Filter>backend</Filter>
+    </ClCompile>
+    <ClCompile Include="src\backend\pointers.cpp">
+      <Filter>backend</Filter>
+    </ClCompile>
+    <ClCompile Include="src\backend\renderer.cpp">
+      <Filter>backend</Filter>
+    </ClCompile>
+    <ClCompile Include="src\backend\script.cpp">
+      <Filter>backend</Filter>
+    </ClCompile>
+    <ClCompile Include="src\backend\script_global.cpp">
+      <Filter>backend</Filter>
+    </ClCompile>
+    <ClCompile Include="src\backend\script_hook.cpp">
+      <Filter>backend</Filter>
+    </ClCompile>
+    <ClCompile Include="src\backend\script_mgr.cpp">
+      <Filter>backend</Filter>
+    </ClCompile>
+    <ClCompile Include="src\backend\vmt_hook.cpp">
+      <Filter>backend</Filter>
+    </ClCompile>
+    <ClCompile Include="src\common.cpp" />
+    <ClCompile Include="src\features.cpp" />
+    <ClCompile Include="src\frontend\gui.cpp">
+      <Filter>frontend</Filter>
+    </ClCompile>
+    <ClCompile Include="src\frontend\purge-theme\ui.cpp">
+      <Filter>frontend\purge-theme</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\memory\module.cpp">
+      <Filter>memory</Filter>
+    </ClCompile>
+    <ClCompile Include="src\memory\pattern.cpp">
+      <Filter>memory</Filter>
+    </ClCompile>
+    <ClCompile Include="src\memory\pattern_batch.cpp">
+      <Filter>memory</Filter>
+    </ClCompile>
+    <ClCompile Include="src\memory\range.cpp">
+      <Filter>memory</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
