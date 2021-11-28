@@ -126,7 +126,7 @@ namespace big
 		if (g_gui.m_opened)
 			CONTROLS::DISABLE_ALL_CONTROL_ACTIONS(0);
 		
-		//g_ui.Tick();
+		g_ui.Tick();
 	}
 
 	void gui::script_func()
