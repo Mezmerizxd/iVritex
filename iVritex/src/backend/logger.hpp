@@ -25,7 +25,7 @@ namespace big
 		explicit logger() :
 			m_file_path(std::getenv("appdata"))
 		{
-			m_file_path /= "BigBaseV2";
+			m_file_path /= "iVritex";
 			try
 			{
 				if (!std::filesystem::exists(m_file_path))
@@ -38,7 +38,7 @@ namespace big
 					std::filesystem::create_directory(m_file_path);
 				}
 
-				m_file_path /= "BigBaseV2.log";
+				m_file_path /= "iVritex.log";
 				m_file_out.open(m_file_path, std::ios_base::out | std::ios_base::app);
 			}
 			catch (std::filesystem::filesystem_error const&)
@@ -50,7 +50,7 @@ namespace big
 
 			if ((m_console_handle = GetStdHandle(STD_OUTPUT_HANDLE)) != nullptr)
 			{
-				SetConsoleTitleA("BigBaseV2");
+				SetConsoleTitleA("iVritex");
 				SetConsoleOutputCP(CP_UTF8);
 			
 				m_console_out.open("CONOUT$", std::ios_base::out | std::ios_base::app);

@@ -11,9 +11,11 @@
 #include "renderer.hpp"
 #include "script.hpp"
 #include "features.hpp"
+#include "purge-theme/ui.hpp"
 
 #include <imgui.h>
 #include <StackWalker.h>
+
 
 namespace big
 {
@@ -43,6 +45,7 @@ namespace big
 		style.WindowTitleAlign = { 0.5f, 0.5f };
 		style.ButtonTextAlign = { 0.5f, 0.5f };
 		style.DisplaySafeAreaPadding = { 3.f, 3.f };
+
 		auto& colors = style.Colors;
 		colors[ImGuiCol_Text] = ImVec4(1.00f, 1.00f, 1.00f, 1.00f);
 		colors[ImGuiCol_TextDisabled] = ImVec4(1.00f, 0.90f, 0.19f, 1.00f);
@@ -100,8 +103,9 @@ namespace big
 
 		if (ImGui::Begin("iVritex"))
 		{
+			ImGui::Text("Quick Mods");
 			ImGui::Checkbox("Godmode", &game.Self_Godmode);
-			ImGui::Checkbox("Never Wanted", &game.Self_NeverWanted);
+			ImGui::Checkbox("No Clip", &game.Self_Noclip);
 
 			if (ImGui::Button("Unload"))
 			{
@@ -113,21 +117,22 @@ namespace big
 
 	void gui::script_init()
 	{
-		features::game.Alert("iVritex is starting.", "iVritex", "~g~[INFO]");
+		LOG_INFO("iVritex is starting.");
+		g_ui.PurgeTheme();
 	}
 
 	void gui::script_on_tick()
 	{
 		if (g_gui.m_opened)
-		{
 			CONTROLS::DISABLE_ALL_CONTROL_ACTIONS(0);
-		}
+		
+		//g_ui.Tick();
 	}
 
 	void gui::script_func()
 	{
 		g_gui.script_init();
-		features::game.Alert("ImGui is ready.", "iVritex", "~g~[INFO]");
+		features::game.Alert("iVritex has fully loaded", "iVritex", "~g~[INFO]");
 
 		while (true)
 		{

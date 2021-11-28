@@ -14,5 +14,6 @@ namespace rage
 		std::uint8_t b;
 		std::uint8_t a;
 	};
+	
 	static_assert(sizeof(rgbaColor) == sizeof(std::uint8_t) * 4);
 }

@@ -55,6 +55,8 @@ BOOL APIENTRY DllMain(HMODULE hmod, DWORD reason, PVOID)
 				g_hooking->enable();
 				LOG_INFO("Hooking enabled.");
 
+				LOG_INFO("iVritex is ready to use.");
+
 				while (g_running)
 				{
 					if (GetAsyncKeyState(VK_END) & 0x8000)
