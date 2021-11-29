@@ -2,3 +2,7 @@
 bin
 vendor
 iVritex.sln
+
+iVritex.vcxproj.filters
+iVritex.vcxproj
+iVritex.vcxproj.user

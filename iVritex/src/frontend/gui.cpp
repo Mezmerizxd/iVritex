@@ -11,7 +11,6 @@
 #include "renderer.hpp"
 #include "script.hpp"
 #include "features.hpp"
-#include "purge-theme/ui.hpp"
 
 #include <imgui.h>
 #include <StackWalker.h>
@@ -117,22 +116,18 @@ namespace big
 
 	void gui::script_init()
 	{
-		LOG_INFO("iVritex is starting.");
-		g_ui.PurgeTheme();
+		// LOG_INFO("iVritex is starting.");
 	}
 
 	void gui::script_on_tick()
 	{
 		if (g_gui.m_opened)
 			CONTROLS::DISABLE_ALL_CONTROL_ACTIONS(0);
-		
-		g_ui.Tick();
 	}
 
 	void gui::script_func()
 	{
 		g_gui.script_init();
-		features::game.Alert("iVritex has fully loaded", "iVritex", "~g~[INFO]");
 
 		while (true)
 		{
