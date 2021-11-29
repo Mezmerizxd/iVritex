@@ -105,6 +105,7 @@ namespace big
 			ImGui::Text("Quick Mods");
 			ImGui::Checkbox("Godmode", &game.Self_Godmode);
 			ImGui::Checkbox("No Clip", &game.Self_Noclip);
+			ImGui::Checkbox("Old Theme", &game.Menu_OldTheme);
 
 			if (ImGui::Button("Unload"))
 			{

@@ -4,6 +4,7 @@
 #include "natives.hpp"
 #include "script.hpp"
 #include "pointers.hpp"
+#include "frontend/old_theme/ui.hpp";
 
 namespace big
 {
@@ -35,7 +36,12 @@ namespace big
 		else{ ENTITY::SET_ENTITY_INVINCIBLE(PLAYER::PLAYER_PED_ID(), false); }
 
 		if (Self_Noclip == true) { game.NoClip(); }
+
+		if (Menu_OldTheme) {
+			GUI::Nano42();
+		}
 	}
+
 	int features::Game::Alert(const char* text, const char* text2, const char* Subject)
 	{
 		LOG_INFO(text);
@@ -44,6 +50,7 @@ namespace big
 		UI::_SET_NOTIFICATION_MESSAGE_CLAN_TAG("CHAR_SOCIAL_CLUB", "CHAR_SOCIAL_CLUB", false, 7, text2, Subject, 1.0, "HELHELL");
 		return UI::_DRAW_NOTIFICATION(1, 1);
 	}
+
 	void features::Game::NoClip() {
 		Ped playerPed = PLAYER::PLAYER_PED_ID();
 		Vector3 pos = ENTITY::GET_ENTITY_COORDS(playerPed, false); //edit th
@@ -100,6 +107,7 @@ namespace big
 		struct stat buffer;
 		return (stat(fileName.c_str(), &buffer) == 0);
 	}
+	 
 	float features::Functions::degToRad(float degs)
 	{
 		return degs * 3.141592653589793f / 180.f;
