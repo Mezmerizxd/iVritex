@@ -18,10 +18,12 @@ namespace big::features
 		bool Self_Godmode = false;
 		bool Self_Noclip = false;
 		bool Menu_OldTheme = false;
+		bool Menu_PurgeTheme = false;
 	public:
 		void ToggleMods();
 		int Alert(const char* text, const char* text2, const char* Subject);
 		void NoClip();
+		void SpawnCar(const char* model);
 	};
 
 	class Functions

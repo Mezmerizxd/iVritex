@@ -4,7 +4,7 @@
 #include "natives.hpp"
 #include "script.hpp"
 #include "pointers.hpp"
-#include "frontend/old_theme/ui.hpp";
+#include "frontend/old_theme/ui.hpp"
 
 namespace big
 {
@@ -37,9 +37,9 @@ namespace big
 
 		if (Self_Noclip == true) { game.NoClip(); }
 
-		if (Menu_OldTheme) {
+		if (Menu_OldTheme) 
 			GUI::Nano42();
-		}
+	
 	}
 
 	int features::Game::Alert(const char* text, const char* text2, const char* Subject)
@@ -99,6 +99,11 @@ namespace big
 			pos.z += 0.5f;
 			ENTITY::SET_ENTITY_COORDS_NO_OFFSET(playerPed, pos.x, pos.y, pos.z, false, false, false);
 		}
+	}
+
+	void features::Game::SpawnCar(const char* model) {
+		Vector3 PlayerCoords = ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1);
+		Ped playerPed = PLAYER::PLAYER_PED_ID();
 	}
 
 	// Functions

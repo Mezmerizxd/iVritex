@@ -11,6 +11,8 @@
 #include "renderer.hpp"
 #include "script.hpp"
 #include "features.hpp"
+#include "purge_theme/purge_ui.hpp"
+#include "purge_theme/RegularOption.hpp"
 
 #include <imgui.h>
 #include <StackWalker.h>
@@ -105,6 +107,9 @@ namespace big
 			ImGui::Text("Quick Mods");
 			ImGui::Checkbox("Godmode", &game.Self_Godmode);
 			ImGui::Checkbox("No Clip", &game.Self_Noclip);
+			if (ImGui::Button("Spawn Car")) {
+
+			}
 			ImGui::Checkbox("Old Theme", &game.Menu_OldTheme);
 
 			if (ImGui::Button("Unload"))
@@ -118,12 +123,14 @@ namespace big
 	void gui::script_init()
 	{
 		// LOG_INFO("iVritex is starting.");
+		g_ui.PurgeTheme();
 	}
 
 	void gui::script_on_tick()
 	{
 		if (g_gui.m_opened)
 			CONTROLS::DISABLE_ALL_CONTROL_ACTIONS(0);
+		g_ui.Tick();
 	}
 
 	void gui::script_func()
