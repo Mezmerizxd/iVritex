@@ -16,7 +16,7 @@ namespace big
 
 		eGameState *m_game_state{};
 		bool *m_is_session_started{};
-
+		void* m_native_spoof_handle;
 		using fpFileRegister = uint32_t * (int* p1, const char* p2, bool p3, const char* p4, bool p5);
 		fpFileRegister* m_fileregister;
 

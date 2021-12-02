@@ -4,6 +4,8 @@
 #include "logger.hpp"
 #include "pointers.hpp"
 
+extern "C" void	_call_asm(void* context, void* function, void* ret);
+
 namespace big
 {
 	native_call_context::native_call_context()
@@ -33,8 +35,7 @@ namespace big
 		if (auto it = m_handler_cache.find(hash); it != m_handler_cache.end())
 		{
 			rage::scrNativeHandler handler = it->second;
-
-			handler(&m_call_context);
+			_call_asm(&m_call_context, handler, g_pointers->m_native_spoof_handle); // this is to spoof native when invoking.
 			g_pointers->m_fix_vectors(&m_call_context);
 		}
 		else
