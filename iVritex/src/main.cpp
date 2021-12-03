@@ -24,20 +24,20 @@ BOOL APIENTRY DllMain(HMODULE hmod, DWORD reason, PVOID)
 				auto pointers_instance = std::make_unique<pointers>();
 				LOG_INFO("Pointers initialized.");
 
-				//if (*g_pointers->m_game_state != eGameState::Playing)
-				//{
-				//	LOG_INFO("Waiting for the game to load.");
-				//	do
-				//	{
-				//		std::this_thread::sleep_for(100ms);
-				//	} while (*g_pointers->m_game_state != eGameState::Playing);
-				//
-				//	LOG_INFO("The game has loaded.");
-				//}
-				//else
-				//{
-				//	LOG_INFO("The game is already loaded.");
-				//}
+				if (*g_pointers->m_game_state != eGameState::Playing)
+				{
+					LOG_INFO("Waiting for the game to load.");
+					do
+					{
+						std::this_thread::sleep_for(100ms);
+					} while (*g_pointers->m_game_state != eGameState::Playing);
+				
+					LOG_INFO("The game has loaded.");
+				}
+				else
+				{
+					LOG_INFO("The game is already loaded.");
+				}
 
 				auto renderer_instance = std::make_unique<renderer>();
 				LOG_INFO("Renderer initialized.");
