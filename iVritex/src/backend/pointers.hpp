@@ -3,7 +3,6 @@
 #include "gta/fwddec.hpp"
 #include "gta/enums.hpp"
 #include "function_types.hpp"
-
 namespace big
 {
 	class pointers
@@ -17,25 +16,21 @@ namespace big
 		eGameState *m_game_state{};
 		bool *m_is_session_started{};
 
+		void* m_native_spoof_handle;
 		using fpFileRegister = uint32_t * (int* p1, const char* p2, bool p3, const char* p4, bool p5);
 		fpFileRegister* m_fileregister;
 
 		CPedFactory **m_ped_factory{};
 		CNetworkPlayerMgr **m_network_player_mgr{};
-
 		rage::scrNativeRegistrationTable *m_native_registration_table{};
 		functions::get_native_handler_t m_get_native_handler{};
 		functions::fix_vectors_t m_fix_vectors{};
-
 		rage::atArray<GtaThread*> *m_script_threads{};
 		rage::scrProgramTable *m_script_program_table{};
 		functions::run_script_threads_t m_run_script_threads{};
 		std::int64_t **m_script_globals{};
-
 		CGameScriptHandlerMgr **m_script_handler_mgr{};
-
 		IDXGISwapChain **m_swapchain{};
 	};
-
 	inline pointers *g_pointers{};
 }
