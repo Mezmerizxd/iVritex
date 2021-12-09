@@ -17,8 +17,8 @@ namespace big::features
 	public:
 		bool Self_Godmode = false;
 		bool Self_Noclip = false;
-		bool Menu_OldTheme = false;
-		bool Menu_PurgeTheme = false;
+		bool Menu_NanoTheme = false;
+		bool Menu_BigBaseTheme = false;
 	public:
 		void ToggleMods();
 		int Alert(const char* text, const char* text2, const char* Subject);

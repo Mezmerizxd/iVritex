@@ -62,10 +62,10 @@ namespace big
 				m_fileregister = ptr.sub(45).as<decltype(m_fileregister)>();
 			});
 
-		main_batch.add("Native Spoof", "FF E3", [this](memory::handle ptr)
-		{
-			m_native_spoof_handle = ptr.as<decltype(m_native_spoof_handle)>();
-		});
+		//main_batch.add("Native Spoof", "FF E3", [this](memory::handle ptr)
+		//{
+		//	m_native_spoof_handle = ptr.as<decltype(m_native_spoof_handle)>();
+		//});
 
 		main_batch.run(memory::module(nullptr));
 

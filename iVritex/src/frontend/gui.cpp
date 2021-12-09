@@ -110,7 +110,8 @@ namespace big
 			if (ImGui::Button("Spawn Car")) {
 
 			}
-			ImGui::Checkbox("Old Theme", &game.Menu_OldTheme);
+			ImGui::Checkbox("Nano42", &game.Menu_NanoTheme);
+			ImGui::Checkbox("BigBase", &game.Menu_BigBaseTheme);
 
 			if (ImGui::Button("Unload"))
 			{
@@ -130,7 +131,9 @@ namespace big
 	{
 		if (g_gui.m_opened)
 			CONTROLS::DISABLE_ALL_CONTROL_ACTIONS(0);
-		g_ui.Tick();
+
+		if (features::game.Menu_BigBaseTheme)
+			g_ui.Tick();
 	}
 
 	void gui::script_func()

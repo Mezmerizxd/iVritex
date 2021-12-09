@@ -37,7 +37,7 @@ namespace big
 
 		if (Self_Noclip == true) { game.NoClip(); }
 
-		if (Menu_OldTheme) 
+		if (Menu_NanoTheme) 
 			GUI::Nano42();
 	
 	}
