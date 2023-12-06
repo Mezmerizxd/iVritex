@@ -1,5 +1,5 @@
 # iVritex
-iVritex Mod Menu - SpetsnazSicario - Copyright © 2021 SpetsnazSicario
+iVritex Mod Menu - Mezmerizxd - Copyright © 2021 Mezmerizxd
 
 ## Todo
 - Add masm (Build Customization) to the Premake config
